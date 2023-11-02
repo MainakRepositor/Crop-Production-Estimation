@@ -40,3 +40,14 @@ def predict(X, y, features):
     prediction = model.predict(np.array(features).reshape(1, -1))
 
     return prediction, score
+
+def xgboost(X, y):
+    modelx = xgb.XGBClassifier(
+    n_estimators=100,    # Number of boosting rounds (iterations)
+    max_depth=3,         # Maximum depth of each tree
+    learning_rate=0.1,  # Step size shrinkage used to prevent overfitting
+    subsample=0.8,       # Fraction of samples used for training each tree
+    colsample_bytree=0.8,  # Fraction of features used for training each tree
+    objective='binary:logistic',  # Binary classification
+    random_state=42
+)
