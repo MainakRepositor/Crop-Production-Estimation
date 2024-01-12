@@ -1,5 +1,5 @@
 seaborn
-streamlit == 1.26.0
+streamlit == 1.30.0
 numpy
 matplotlib
 pandas
